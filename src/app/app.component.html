@@ -227,7 +227,23 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <h1>Mi cerveza favorita: {{ cerveza }}</h1>
+      <h2>Lista de Cervezas</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cerveza of cervezas">
+      <td>{{ cerveza.nombre }}</td>
+      <td>{{ cerveza.tipo }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

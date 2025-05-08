@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfolio-angular';
-  cerveza = 'IPA';
+  cervezas = [
+    { nombre: 'IPA', tipo: 'Lupulada' },
+    { nombre: 'Stout', tipo: 'Oscura' },
+    { nombre: 'Pilsen', tipo: 'Rubia' }
+  ];
 }
