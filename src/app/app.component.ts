@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';  // Agregar CommonModule
 export class AppComponent {
   title = 'portfolio-angular';
   cervezas = [
-    { nombre: 'IPA', tipo: 'Lupulada', imagen: 'https://via.placeholder.com/150/0000FF/808080?Text=IPA' },
-    { nombre: 'Stout', tipo: 'Oscura', imagen: 'https://via.placeholder.com/150/0000FF/808080?Text=Stout' },
-    { nombre: 'Pilsen', tipo: 'Rubia', imagen: 'https://via.placeholder.com/150/0000FF/808080?Text=Pilsen' }
+    { nombre: 'IPA', tipo: 'Lupulada', imagen: 'https://upload.wikimedia.org/wikipedia/commons/3/39/IPA_Beer.jpg' },
+    { nombre: 'Stout', tipo: 'Oscura', imagen: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Guinness_Stout.jpg' },
+    { nombre: 'Pilsen', tipo: 'Rubia', imagen: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Pilsner_Urquell_Bottle.jpg' }
   ];
+
 }
