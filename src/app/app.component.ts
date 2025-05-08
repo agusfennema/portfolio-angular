@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';  // Agregar CommonModule
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
