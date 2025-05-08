@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';  // Agregar CommonModule
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],  // Añadir CommonModule aquí
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'portfolio-angular';
@@ -15,4 +16,3 @@ export class AppComponent {
     { nombre: 'Pilsen', tipo: 'Rubia' }
   ];
 }
-
