@@ -3,17 +3,26 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';  // Agregar CommonModule
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],  // Añadir CommonModule aquí
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class AppComponent {
-  title = 'portfolio-angular';
-  cervezas = [
-    { nombre: 'IPA', tipo: 'Lupulada', imagen: 'https://cheverry.com.ar/wp-content/uploads/2020/07/ipa.jpg' },
-    { nombre: 'Stout', tipo: 'Oscura', imagen: 'https://cuzcobebidas.com/images/productos/15749908267C03B72B-1494-4732-975C-72F937ADE36F.jpeg' },
-    { nombre: 'Pilsen', tipo: 'Rubia', imagen: 'https://www.californiasa.com.ar/wp-content/uploads/7793147572075.jpg' }
+export class CartComponent {
+  // Lista de productos en el carrito
+  cartItems = [
+    { nombre: 'IPA', cantidad: 2, precio: 3.5 },
+    { nombre: 'Stout', cantidad: 1, precio: 4.0 },
+    { nombre: 'Pilsen', cantidad: 3, precio: 2.8 }
   ];
 
+  // Método para calcular el total del carrito
+  get total() {
+    return this.cartItems.reduce((sum, item) => sum + (item.cantidad * item.precio), 0);
+  }
+
+  // Simula el proceso de compra
+  checkout() {
+    alert('¡Gracias por tu compra!');
+  }
 }
+
